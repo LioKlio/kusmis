@@ -7,6 +7,17 @@
 
 /* HEX  KUSMIS colors */
 
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: 1s;
+}
+
+.grayscale:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
