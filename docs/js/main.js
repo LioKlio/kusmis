@@ -1,62 +1,77 @@
-let indexpage = document.querySelector('body').classList.contains('index');
+/* eslint-disable no-console */
+/* eslint-disable max-len */
+/* eslint-disable func-names */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable no-tabs */
+/* eslint-disable indent */
+// let indexpage = document.querySelector('body').classList.contains('index');
+
+
+// -- AOS animation
+
+document.querySelectorAll('.aos-group').forEach((el) => {
+	el.querySelectorAll('[data-aos]').forEach((aos, index) => {
+		aos.dataset.aosDelay = 200 * (index + 1);
+	});
+});
 
 AOS.init({
-  once: true,
-  mirror: false
-});
-
-$('a[data-href^="#"]').on('click',function(e) {
-  e.preventDefault();
-  var id = $(this).data("href")
-
-  $('html,body').animate({
-	  scrollTop: $(id).offset().top
-  }, 1000);
-  return false;
+	once: true,
+	mirror: false,
 });
 
 
-// window events ----
-window.onload = () => {
-  // if(!!chart) chartInit();
+// -- SCROLL TO ELEMENT
 
-  const burger = document.querySelector('a.target-burger');
-  burger.addEventListener('click', (ev) => {
-    [...document.querySelectorAll('.burger-el')].forEach((el) => {
-      el.classList.toggle('toggled')
-    })
-  });
+$('a[data-href^="#"]').on('click', (e) => {
+	e.preventDefault();
+	// eslint-disable-next-line no-trailing-spaces
+
+	const id = $(this).data('href');
+
+	$('html,body').animate({
+		scrollTop: $(id).offset().top,
+	}, 1000);
+	return false;
+});
+
+// -- RANDOM POINTS POSITION
+
+function getRandomInt(max) {
+	return Math.floor(Math.random() * Math.floor(max));
+}
+
+function getRating() {
+	const rating = getRandomInt(2) + 3;
+	return rating > 5 ? rating - Math.random() : rating + Math.random();
+}
+
+const placeItRandom = function (els, parent = document.querySelector('body')) {
+	els.forEach((el) => {
+		const elRating = getRating().toFixed(1);
+		el.querySelector('.rating').textContent = elRating;
+		el.querySelector('.stars').classList.add(`stars-${elRating > 4.4 ? 0 : elRating > 3.4 ? 1 : 2}`);
+
+		const x = Math.floor(Math.random() * (parent.offsetWidth - el.offsetWidth));
+		const y = Math.floor(Math.random() * (parent.offsetHeight / 2 - el.offsetHeight / 2));
+
+		$(el).css({
+			transform: `translate(${x}px, ${y}px) scale(${Math.random() + 0.1})`,
+			display: 'flex',
+		});
+	});
 };
 
-// window.onresize = () => {
-//   if (!!chart) chartInit();
-// };
 
-// // CHART ----
-// const chart = document.querySelector('.rise');
-// const pointData = [1, 1.45, 1.83, 2.27, 3.6, 4.1, 7.8, 15.6];
-// const riseChart = document.querySelector('.rise-chart');
-// const risePoints = document.querySelectorAll('.rise-point');
-// const chartInit = () => {
-//   const pointW = (riseChart.offsetWidth - 160) / risePoints.length;
-//   risePoints.forEach((point, inx) => {
-//     point.style.width = pointW + 'px';
-//     point.style.left = `${80 + (inx ?  pointW * inx : 0)}px`;
-//     point.style.top = `${inx ? 100 - (pointData[inx] * riseChart.offsetHeight / 100) : 100}%`;
-//     point.querySelector('.btn').textContent = `${pointData[inx]}%`;
+// -- WINDOW EVENTS
 
-//     point.dataset.aos = 'zoom-in-up';
-//     point.dataset.aosDelay = 200 * (inx + 1);
-//     point.dataset.aosDuration = 800;
-//   });
-// };
+window.onload = () => {
+	const burger = document.querySelector('a.target-burger');
+	burger.addEventListener('click', () => {
+		[...document.querySelectorAll('.burger-el')].forEach((el) => {
+			el.classList.toggle('toggled');
+		});
+	});
 
-
-
-// AOS animation
-document.querySelectorAll('.aos-group').forEach((el) => {
-  el.querySelectorAll('[data-aos]').forEach((aos, index) => {
-    aos.dataset.aosDelay = 200 * (index + 1);
-  })
-});
-
+	placeItRandom([...document.querySelectorAll('.point')], document.querySelector('.area-of-points'));
+};

@@ -526,19 +526,67 @@ section.breadcrumb-nav {
 }
 
 .top {
-  padding-bottom: 200px;
+  position: relative;
   height: 50vh;
   background: #000 url(../img/city.png) 50% 50% no-repeat;
   background-size: cover;
 }
 
 .index .top {
-  padding-top: 140px;
+  padding-top: 40px;
 }
 
-.top .container,
-.top .top-box {
-  height: 100%;
+.top .area-of-points {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 4%;
+  width: 92%;
+  height: 32%;
+}
+
+.top .area-of-points .point {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  width: 70px;
+}
+
+.top .area-of-points .point .icon {
+  width: 100%;
+  text-align: center;
+}
+
+.top .area-of-points .point .icon img {
+  width: 75%;
+}
+
+.top .area-of-points .point .rating {
+  position: absolute;
+  right: -5px;
+  bottom: 0;
+  color: #fff;
+  text-align: right;
+}
+
+.top .area-of-points .point .stars {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  width: 70px;
+  height: 27px;
+  background: url(../img/stars-0.png) 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.top .area-of-points .point .stars.stars-1 {
+  background-image: url(../img/stars-1.png);
+}
+
+.top .area-of-points .point .stars.stars-2 {
+  background-image: url(../img/stars-2.png);
 }
 
 .statistics {
