@@ -65,7 +65,7 @@ var placeItRandom = function placeItRandom(els) {
     var x = Math.floor(Math.random() * (parent.offsetWidth - el.offsetWidth));
     var y = Math.floor(Math.random() * (parent.offsetHeight / 2 - el.offsetHeight / 2));
     $(el).css({
-      transform: "translate(".concat(x, "px, ").concat(y, "px) scale(").concat(Math.random() + 0.1, ")"),
+      transform: "translate(".concat(x, "px, ").concat(y, "px) scale(").concat(Math.random() < 0.4 ? Math.random() + 0.3 : Math.random(), ")"),
       display: 'flex'
     });
   });

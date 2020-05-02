@@ -56,7 +56,7 @@ const placeItRandom = function (els, parent = document.querySelector('body')) {
 		const y = Math.floor(Math.random() * (parent.offsetHeight / 2 - el.offsetHeight / 2));
 
 		$(el).css({
-			transform: `translate(${x}px, ${y}px) scale(${Math.random() + 0.1})`,
+			transform: `translate(${x}px, ${y}px) scale(${Math.random() < 0.4 ? Math.random() + 0.3 : Math.random()})`,
 			display: 'flex',
 		});
 	});
