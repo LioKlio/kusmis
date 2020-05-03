@@ -1,0 +1,128 @@
+//  FONTS
+$roboto:    'Roboto', sans-serif;
+$robotoS:   'Roboto Slab', serif;
+$open-sans: 'Open Sans', sans-serif;
+$arapey:    'Arapey', serif;
+$oswald:    'Oswald', sans-serif;
+$font--soirce-code: 'Source Code Pro', monospace;
+$font--lato: 'Lato', sans-serif;
+
+
+/* HEX  KUSMIS colors */
+$color1: #f8ffe5ff;
+$color2: #218380;
+$color3: #73D2DE;
+$color4: #D81159;
+$color5: #ffbc42;
+
+$color1-rgb: rgb(248, 255, 229);
+$color2-rgb: rgb(33, 131, 128);
+$color3-rgb: rgb(115, 210, 222);
+$color4-rgb: rgb(216, 17, 89);
+$color5-rgb: rgb(255, 188, 66);
+
+$color1-light: #ffffff;
+$color2-light: #69c4c1;
+$color3-light: #a7e4ec;
+$color4-light: #ff5f9a;
+$color5-light: #ffdd9e;
+
+$color1-dark: rgb(248, 255, 229);
+$color2-dark: rgb(10, 70, 68);
+$color3-dark: rgb(115, 210, 222);
+$color4-dark: rgb(104, 18, 50);
+$color5-dark: rgb(214, 143, 10);
+
+
+$red:        $color4;
+$blue:       $color3;
+$dark:       #232323;
+$light:      $color1;
+$bg-color:   #f8f9fa;
+
+$primary:             $color2;
+$info:                $blue;
+$brand-primary:       $color2;
+
+
+$font-family-base: $font--lato;
+
+$def-font:      $font-family-base;
+$text-font:     $font-family-base;
+$title-font:    $font--soirce-code;
+
+$def-font-color:      $dark;
+$text-color:          $dark;
+$title-color:         $dark;
+
+$text-muted: #ced4da;
+
+
+$font-weight-lighter:         100;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            600;
+$font-weight-bolder:          700;
+$font-weight-extrabold:       900;
+
+
+$border-color: #d8d8d8;
+$border-radius: 4px;
+$border-radius-lg: 4px;
+
+$input-border-color: $border-color;
+
+$btn-padding-x:                 2rem;
+$input-padding-x:               1rem;
+$input-btn-padding-y:           1rem;
+$input-btn-font-size:        0.9375rem;
+
+$btn-padding-y-sm:              .6rem;
+$btn-padding-x-sm:              .9rem;
+$btn-font-size-sm:              0.875rem;
+
+$btn-padding-x-lg:              3.5rem;
+$input-padding-x-lg:            1rem;
+$input-btn-padding-y-lg:        1.25rem;
+$input-btn-font-size-lg:        0.9375rem;
+
+$input-btn-focus-width:         0;
+$input-btn-focus-color:         $border-color;
+$input-box-shadow:              none;
+$input-focus-box-shadow:        none;
+
+
+$anim: cubic-bezier(.175,.885,.32,1.275);
+
+
+// $btn-primary-color:   $white;
+$btn-primary-bg:      $brand-primary;
+$btn-primary-border:  $border-color;
+$breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYmkgYmktY2hldnJvbi1yaWdodCIgd2lkdGg9IjFlbSIgaGVpZ2h0PSIxZW0iIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0iY3VycmVudENvbG9yIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNi42NDYgMy42NDZhLjUuNSAwIDAxLjcwOCAwbDYgNmEuNS41IDAgMDEwIC43MDhsLTYgNmEuNS41IDAgMDEtLjcwOC0uNzA4TDEyLjI5MyAxMCA2LjY0NiA0LjM1NGEuNS41IDAgMDEwLS43MDh6IiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1600px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1540px
+) !default;
+
+$enable-shadows: true;
+$enable-responsive-font-sizes: true;
+
+
+.grayscale {
+  filter: grayscale(100%);
+  transition: 1s;
+}
+.grayscale:hover {
+  filter: grayscale(0);
+}

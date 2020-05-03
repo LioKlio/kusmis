@@ -1,7 +1,5 @@
 "use strict";
 
-var _this = void 0;
-
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -38,9 +36,8 @@ AOS.init({
 }); // -- SCROLL TO ELEMENT
 
 $('a[data-href^="#"]').on('click', function (e) {
-  e.preventDefault(); // eslint-disable-next-line no-trailing-spaces
-
-  var id = $(_this).data('href');
+  e.preventDefault();
+  var id = $(e.target).data('href');
   $('html,body').animate({
     scrollTop: $(id).offset().top
   }, 1000);

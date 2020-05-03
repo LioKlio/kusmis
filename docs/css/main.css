@@ -64,52 +64,41 @@ h1 + .lead,
   margin-top: -2.4rem;
 }
 
-h1 h2,
-h1 .h2,
-.h1 h2,
-.h1 .h2 {
+h2,
+.h2 {
   margin-bottom: 2.5rem;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-h1 h3,
-h1 .h3,
-.h1 h3,
-.h1 .h3 {
+h3,
+.h3 {
   margin-bottom: 2.5rem;
   font-size: 1.3125rem;
   font-weight: 600;
 }
 
-h1 h4,
-h1 .h4,
-.h1 h4,
-.h1 .h4 {
+h4,
+.h4 {
   margin-bottom: 2rem;
   font-size: 1.125rem;
   font-weight: 600;
 }
 
-h1 h5,
-h1 .h5,
-.h1 h5,
-.h1 .h5 {
+h5,
+.h5 {
   margin-bottom: 2rem;
   font-size: 1rem;
   font-weight: 600;
 }
 
-h1 h6,
-h1 .h6,
-.h1 h6,
-.h1 .h6 {
+h6,
+.h6 {
   margin-bottom: 2rem;
   font-size: 1rem;
 }
 
-h1 .section-title,
-.h1 .section-title {
+.section-title {
   margin-bottom: 3.75rem;
 }
 
@@ -141,39 +130,14 @@ ol:not([class]) {
 
 .btn-primary {
   font-weight: 700;
+  letter-spacing: 1px;
+  border: transparent;
+  background-image: linear-gradient(225deg, #0a4644 0%, #218380 100%);
+  transition: 3s;
 }
 
-.form-group .form-check {
-  margin-bottom: 15px;
-}
-
-.form-control {
-  background-color: #f8ffe5ff;
-}
-
-::-webkit-input-placeholder {
-  color: #dbdbdb;
-  font-size: 15px;
-}
-
-::-moz-placeholder {
-  color: #dbdbdb;
-  font-size: 15px;
-}
-
-:-ms-input-placeholder {
-  color: #dbdbdb;
-  font-size: 15px;
-}
-
-::-ms-input-placeholder {
-  color: #dbdbdb;
-  font-size: 15px;
-}
-
-::placeholder {
-  color: #dbdbdb;
-  font-size: 15px;
+.btn-primary:hover {
+  background-image: linear-gradient(225deg, #681232 0%, #d81159 100%);
 }
 
 input.custom-control-input ~ label {
@@ -270,10 +234,6 @@ input.custom-control-input:disabled ~ label {
   right: 0;
 }
 
-a.nav-link {
-  cursor: pointer;
-}
-
 .logo svg {
   width: auto;
   height: 60px;
@@ -367,6 +327,7 @@ a.nav-link {
 nav.navbar-collapse {
   display: flex;
   justify-content: flex-end;
+  transition: .4s;
 }
 
 nav.navbar-collapse .navbar-nav {
@@ -382,6 +343,7 @@ nav .nav-item {
 
 nav .nav-link {
   color: #232323;
+  cursor: pointer;
 }
 
 nav .nav-link-toggle::after {
@@ -417,6 +379,7 @@ a.target-burger {
   height: 30px;
   position: relative;
   transition: .5s;
+  z-index: 10;
 }
 
 a.target-burger:hover {
@@ -459,25 +422,6 @@ a.target-burger ul.buns li.bun:last-child {
   transform: translateY(3.75px) translateZ(0);
 }
 
-.header {
-  padding: 20px 0;
-  width: 100%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.02);
-  z-index: 200;
-}
-
-.index .header {
-  width: 100%;
-}
-
-.index .header a {
-  font-family: "Source Code Pro", monospace;
-  color: #218380;
-  font-weight: 200;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-}
-
 .logo-icon {
   position: absolute;
   top: 0;
@@ -500,6 +444,25 @@ a.target-burger ul.buns li.bun:last-child {
 .logo-icon.left {
   width: 134px;
   height: 40px;
+}
+
+.header {
+  padding: 20px 0;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.02);
+  z-index: 200;
+}
+
+.header {
+  width: 100%;
+}
+
+.header a {
+  font-family: "Source Code Pro", monospace;
+  color: #218380;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 section {
@@ -586,47 +549,6 @@ section.breadcrumb-nav {
   background-image: url(../img/stars-2.png);
 }
 
-.statistics {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  padding: 40px 0;
-  width: 100%;
-}
-
-.statistics ul {
-  list-style-type: none;
-}
-
-.statistics ul li {
-  min-height: 130px;
-  background: url(../img/separator.png) 100% 50% no-repeat;
-}
-
-.statistics ul li:last-child {
-  background: none;
-}
-
-.statistics ul li p {
-  color: #fff;
-}
-
-.statistics ul li .num {
-  font-size: 28px;
-  font-weight: 700;
-}
-
-.pricies .price {
-  font-size: 2.5rem;
-  font-family: "Source Code Pro", monospace;
-  text-align: right;
-  white-space: nowrap;
-}
-
-.pricies .price span {
-  font-size: 14px;
-}
-
 .jumbotron {
   position: relative;
   color: #fff;
@@ -651,24 +573,9 @@ section.breadcrumb-nav {
   pointer-events: none;
 }
 
-.work .case {
-  padding: 30px;
-  border-radius: 8px;
-  background: url(../img/case-img.jpg) 50% 50% no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}
-
-.work .case * {
-  color: #fff;
-}
-
-.work .case h2 {
-  font-size: 2.5rem;
-}
-
-.work .case .tag {
-  border-color: #fff;
+.video iframe {
+  width: 100%;
+  min-height: 500px;
 }
 
 .contacts {
@@ -688,6 +595,12 @@ section.breadcrumb-nav {
 
 .contacts .svg-map path {
   fill: #fff;
+}
+
+.contacts .team {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dae0e5;
+  border-bottom: 1px solid #dae0e5;
 }
 
 .contacts .team ul {
@@ -730,14 +643,7 @@ section.breadcrumb-nav {
   color: #232323;
 }
 
-.tags {
-  margin: 16px 0 24px;
-}
-
-.tags .tag {
-  margin: 5px;
-  padding: .4rem .6rem;
-}
+/* ======== */
 
 .triangles {
   position: relative;
@@ -793,7 +699,7 @@ section.breadcrumb-nav {
 .footer {
   padding: 20px 0;
   width: 100%;
-  background-color: #f8ffe5ff;
+  background-color: #f8f9fa;
   z-index: 200;
 }
 
@@ -834,12 +740,12 @@ section.breadcrumb-nav {
 }
 
 @media (max-width: 1020px) {
-  header nav.navbar-collapse {
+  .logo-icon-block {
     display: none;
   }
 
-  a.target-burger {
-    display: block;
+  .header a {
+    font-size: 18px;
   }
 }
 
@@ -850,6 +756,39 @@ section.breadcrumb-nav {
 
   .triangles figure.triangle_r {
     right: -180px;
+  }
+}
+
+@media (max-width: 770px) {
+  header nav.navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40%;
+    height: 100vh;
+    padding: 100px 60px;
+    background-color: #f8f9fa;
+    z-index: 2;
+    transform: translateX(100%);
+  }
+
+  header nav.navbar-collapse .navbar-nav {
+    flex-direction: column;
+  }
+
+  header nav.navbar-collapse .navbar-nav .nav-link {
+    text-align: right;
+  }
+
+  header nav.navbar-collapse.toggled {
+    transform: translateX(0);
+  }
+
+  a.target-burger {
+    display: block;
   }
 }
 
@@ -874,7 +813,7 @@ section.breadcrumb-nav {
 }
 
 @media (max-width: 768px) {
-  .pricies .price-block:not(:last-child) {
+  .columns .columns-block:not(:last-child) {
     margin-bottom: 3rem;
     border-bottom: 1px solid #d8d8d8;
   }
@@ -884,16 +823,6 @@ section.breadcrumb-nav {
   .top {
     padding-top: 120px;
     padding-bottom: 0;
-  }
-
-  .statistics {
-    position: relative;
-    bottom: auto;
-    background-color: #f8ffe5ff;
-  }
-
-  .statistics ul li p {
-    color: #232323;
   }
 }
 

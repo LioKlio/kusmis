@@ -1,0 +1,119 @@
+extends layout/main.pug
+
+block vars
+  - const title = 'Главная';
+  - const pagetype = 'index';
+
+block content
+
+  section.top
+    .area-of-points
+      each val in [1, 2, 3, 4, 5, 6]
+        .point
+          .icon
+            img(src=`img/icon-top-${val}.png`, alt="")
+          .rating 5
+          .stars
+
+    .container
+      .top-box.d-flex.flex-column.justify-content-center
+
+        .d-flex.justify-content-center.align-items-end.pb-4
+          h1.text-center.text-white(data-aos="zoom-in-down" data-aos-delay="100" data-aos-duration="1000")
+            |Make your business accessible<br>to the whole world
+
+
+  section#about.columns: .container-fluid
+    .row
+      .columns-block.col-12.col-lg-4.px-5.pb-5.pb-lg-0
+        .title-icon.h1.mb-0 Community
+        p KusMis platform brings together suppliers and clients to form a unique and effective community of active users on the world map.
+      .columns-block.col-12.col-lg-4.px-5.pb-5.pb-lg-0
+        .title-icon.h1.mb-0 Business
+        p Entrepreneurs get a powerful tool that enables them to become a part of a growing smart consumer community, advertise, collect feedback, set-up cashless payments, set-up availability times for online booking, and provide live video streams. With KusMis you are closer than ever to every potential customer.
+      .columns-block.col-12.col-lg-4.px-5.pb-5.pb-lg-0
+        .title-icon.h1.mb-0 Customer
+        p Users can easily find, select, view live video feeds, rate, compare, book, and pay for services, pre-filtered by the given parameters. With KusMis you are everywhere you need to be. 
+
+
+  section.jumbotron.triangles.red.text-white
+    figure.triangle_l
+      include svg/triangle.pug
+    figure.triangle_r
+      include svg/triangle.pug
+    canvas#nodes
+    .container
+      .row.py-5
+        .col.text-center
+          .h1.text-white Вы получаете в 15 раз больше заявок!
+          .lead: strong На этом работа не заканчивается!
+
+          .py-5
+            .lead.text-center In-depth analytical system provides an independent analysis based on such indicators as all user rating, specific set of reviews, pricing, number of closed transactions, registration date, geolocation, etc. – combined information analysis will help to improve both the quality of the services provided and consumer awareness about the most convenient as well as top-end products on the market available online.
+
+
+  section: .container-fluid
+    .title-icon.h1.section-title.text-center Мы делаем
+    //- p.lead.text-center Как мы этого достигаем?
+    .container
+      .row
+        .col-12.col-sm-6
+          h2.list For businesses:
+          ul
+            li Reliable information storage system
+            li Feature rich advertising model
+            li Live communication channels with customers
+            li Cashless payment method
+            li Review and rate clients
+            li Automatic accounting nomenclature system
+            li Activity and efficiency reports
+            li Analysis of performance on the platform
+            li Set-up working schedules and bookings
+        .col-12.col-sm-6
+          h2.list For users:
+          ul
+            li Live contact with service representatives
+            li Deteailed overview of the services provided
+            li Live video streams of key service states, such as queues
+            li Calendar booking system
+            li View the best deals based on selected criteria
+            li Fast and simple payment system
+            li Provide instant feedback and influence the business
+            li Special discounts and offers
+
+
+  section#video.video: .container
+    .row.justify-content-md-center
+      .col-12.col-md-6
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EnWOvXfFUHM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    .row
+      .col
+        a.btn.btn-primary.full-w(href="/") Join us
+      .col
+        a.btn.btn-primary.full-w(href="/") One pager
+
+
+  section#contacts.left-side.contacts: .container-fluid
+    .h1.section-title.text-center CONTACTS
+
+    .row
+      .contact.col-12.col-md-5.d-flex.flex-column.justify-content-center
+        .row.justify-content-end
+          .col-12.col-lg-9.text-center.py-5(data-aos="fade-right" data-aos-delay="300" data-aos-duration="1400")
+            include svg/map.pug
+            .h1.pt-4 Contact Us
+            p E-mail: 
+              a(href="mailto:info@kusmis.ee") info@kusmis.ee
+
+
+      .team.col-12.col-md-7.px-0
+        ul
+          li 
+            img.photo.grayscale(src="img/Sergei.png")
+            .cont Sergei Arts <br><span>CEO</span> <br><span>+372 50 45 233</span> 
+          li 
+            img.photo.grayscale(src="img/Pavel.png")
+            .cont Pavel Kudrjavtsev <br><span>CEO</span> <br><span>+372 566 14 6 34</span> 
+          li 
+            img.photo.grayscale(src="img/Mark.png")
+            .cont Mark Tomm <br><span>CTO</span> <br><span>+372 58 42 69 09</span>

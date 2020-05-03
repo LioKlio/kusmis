@@ -1,0 +1,13 @@
+.logo {
+  svg {
+    width: auto; height: 60px;
+    @media (max-width: 460px) { height: 30px; }
+    path.logo-text {fill: #000}
+  }
+}
+.index .header .logo svg path.logo-text {fill: #fff}
+
+.str1 {stroke:black;stroke-width:2.11;stroke-miterlimit:2.61313}
+.str0 {stroke:black;stroke-width:2.2;stroke-miterlimit:2.61313}
+.fil1 {fill:none}
+.fil0 {fill:$color2;fill-rule:nonzero}
