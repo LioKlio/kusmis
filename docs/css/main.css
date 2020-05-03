@@ -703,6 +703,14 @@ section.breadcrumb-nav {
   z-index: 200;
 }
 
+.footer a.logo-prototron {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url(../img/prototron.png) 50% 50% no-repeat;
+  background-size: contain;
+}
+
 .footer p {
   font-size: .8em;
   font-weight: 100;

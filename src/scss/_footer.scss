@@ -3,6 +3,14 @@
   background-color: $bg-color;
   z-index: 200;
 
+  a.logo-prototron {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url(../img/prototron.png) 50% 50% no-repeat;
+    background-size: contain;
+  }
+
   p {
     font-size: .8em;
     font-weight: 100;
